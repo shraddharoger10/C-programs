@@ -1,23 +1,21 @@
 
 #include<stdio.h>
 
-int CountEven(int);
+int SumEven(int);
 
 int main()
 {
     int iValue= 0, iRet = 0;
     printf("Enter number\n");
     scanf("%d",&iValue);
-    iRet = CountEven(iValue);
-    printf("Number of even digits are : %d\n",iRet);
+    iRet = SumEven(iValue);
+    printf("Sum of even digits are : %d\n",iRet);
     return 0;
 }
-int CountEven(int iNo)
+int SumEven(int iNo)
 {
-    int iCnt = 0, iDigit = 0;
-    if(iNo == 0)
-    {   return 1;   }
-    
+    int iSum = 0, iDigit = 0;
+
     if(iNo < 0)
     {   iNo = -iNo; }
     
@@ -26,9 +24,9 @@ int CountEven(int iNo)
         iDigit = iNo % 10;
         if((iDigit % 2) == 0)
         {
-            iCnt++;
+            iSum = iSum + iDigit;
         }
         iNo = iNo / 10;
     }
-    return iCnt;
+    return iSum;
 }
