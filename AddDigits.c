@@ -10,7 +10,7 @@ int main()
     printf("Enter number\n");
     scanf("%d",&iValue);
     
-    iRet = Display(iValue);// Display(954)
+    iRet = Display(iValue);
     printf("Addition of digits is : %d\n",iRet);
     
     return 0;
